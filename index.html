@@ -1,12 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cn">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>vip解析</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./reset.css">
 </head>
 <body>
-    Hello I'm root page.
+    <!-- 圣杯布局 -->
+    <div class="nav-bar">
+        <div class="wrapper">
+            <a class="logo"></a>
+            <!-- <header>我的解析网站</header> -->
+    </div>
+    </div>
+    
+    <!-- 解析栏 -->
+    <div id="parsing-bar" class="wrapper">
+        
+        <div class="select-box">
+            <input id="target-url"type="text" placeholder="请输入你想看的链接">
+                <select id="jx"></select>
+            <input type="button" value="解析" onclick="jx()">
+        </div>
+    </div>
+    <!-- 解析主要内容区 -->
+    <div id="parsing-main">
+        <iframe id="playbox"allowfullscreen src="https://okjx.cc/?url=" class="center" height="100%" frameborder="0"></iframe>
+        <div class="left">
+            <!-- 腾讯视频 -->
+            <div class="logo-lie">
+                <a href="http://v.qq.com/" target="_blank">
+                    <img class="img-responsive" src="src/qqlogo.png">
+                </a>
+            </div>
+            <!-- 爱奇艺 -->
+            <div class="logo-lie">
+                <a href="https://www.iqiyi.com/" target="_blank">
+                    <img class="img-responsive" src="src/iqiyilogo.png">
+                </a>
+            </div>
+            <!-- 哔哩哔哩 -->
+            <div class="logo-lie">
+                <a href="https://www.bilibili.com" target="_blank">
+                    <img class="img-responsive" src="src/bilibili.png">
+                </a>
+            </div>
+            <!-- 优酷 -->
+            <div class="logo-lie">
+                <a href="https://www.youku.com/" target="_blank">
+                    <img class="img-responsive" src="src/youkulogo.png">
+                </a>
+            </div>
+        </div>
+        <div class="right">右区域</div>
+    </div>
+    
+    <footer class="clearfix">底部</footer>
 </body>
+<script>
+//读取配置文件
+window.onload = function () {
+            var url = "data.json"/*json文件url，本地的就写本地的位置，如果是服务器的就写服务器的路径*/
+            var request = new XMLHttpRequest();
+            var box = document.getElementById("jx");
+            request.open("get", url);/*设置请求方法与路径*/
+            request.send(null);/*不发送数据到服务器*/
+            request.onload = function () {/*XHR对象获取到返回信息后执行*/
+                if (request.status == 200) {/*返回状态为200，即为数据获取成功*/
+                    var json = JSON.parse(request.responseText);
+                    for(var i = 0;i<json.length;i++){
+                        var option = document.createElement('option');
+                        box.appendChild(option);
+                        option.value = json[i].url;
+                        option.innerText = json[i].name;
+
+                    }
+                }
+            }
+       }
+
+var obj = document.getElementById("jx");
+//执行接口调用函数
+var jx = function(){
+    var url = document.getElementById("target-url").value;
+    var index = obj.selectedIndex;
+    var urljx = obj.options[index].value;
+    var complete_url = urljx + url;
+    var iframe_obj = document.getElementById("playbox");
+    iframe_obj.src=complete_url;
+}
+
+</script>
 </html>
