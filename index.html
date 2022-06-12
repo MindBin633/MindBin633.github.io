@@ -63,7 +63,7 @@
 <script>
 //读取配置文件
 window.onload = function () {
-            var url = "data.json"/*json文件url，本地的就写本地的位置，如果是服务器的就写服务器的路径*/
+            var url = "config.json"/*json文件url，本地的就写本地的位置，如果是服务器的就写服务器的路径*/
             var request = new XMLHttpRequest();
             var box = document.getElementById("jx");
             request.open("get", url);/*设置请求方法与路径*/
@@ -92,6 +92,9 @@ var jx = function(){
     var iframe_obj = document.getElementById("playbox");
     iframe_obj.src=complete_url;
 }
+//绑定事件，我希望隐藏掉不可用的解析接口
+//检查input text的内容，如果含有指定域名的隐藏
+var box = document.getElementById("jx");
 
 </script>
 </html>
