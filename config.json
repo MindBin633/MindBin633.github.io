@@ -2,96 +2,102 @@
     {
         "name": "ok解析",
         "url": "https://okjx.cc/?url=",
-        "notsupport":["v.youku.com"]
+        "notsupport":["youku"]
     },
     {
         "name": "Parwix解析",
-        "url": "https://vip.parwix.com:4433/player/?url="
+        "url": "https://vip.parwix.com:4433/player/?url=",
+        "notsupport":[]
     },
     {
         "name": "MaoPlayer解析",
         "url": "https://www.mtosz.com/m3u8.php?url=",
-        "notsupport":["v.qq.com","bilibili.com","v.youku.com"]
+        "notsupport":["qq","bilibili","youku"]
     },
     {
         "name": "虾米解析",
         "url": "https://jx.7kjx.com/?url=",
-        "notsupport":["bilibili.com","v.youku.com"]
+        "notsupport":["bilibili","v.youku"]
     },
     {
         "name": "纯净1",
         "url": "https://z1.m1907.cn/?jx=",
         "t": "m",
-        "m":["解析腾讯的时候画质低，加载有点慢","解析的时候要选集"]
+        "m":["解析腾讯的时候画质低，加载有点慢","解析的时候要选集"],
+        "notsupport":[]
     },
     {
         "name": "B站1",
         "url": "https://vip.parwix.com:4433/player/?url=",
-        "t": "m"
+        "t": "m",
+        "notsupport":[]
     },
     {
         "name": "爱豆",
         "url": "https://jx.aidouer.net/?url=",
-        "notsupport":["bilibili.com"]
+        "notsupport":["bilibili"]
     },
     {
         "name": "BL(支持视频名称)",
-        "url": "https://vip.bljiex.com/?v="
+        "url": "https://vip.bljiex.com/?v=",
+        "notsupport":[]
     },
     {
         "name": "百域",
-        "url": "https://jx.618g.com/?url="
+        "url": "https://jx.618g.com/?url=",
+        "notsupport":[]
     },
     {
         "name": "MAO",
         "url": "https://www.mtosz.com/m3u8.php?url=",
-        "notsupport":["bilibili.com","v.youku.com"]
+        "notsupport":["bilibili","youku"]
         
     },
     {
         "name": "诺诺",
         "url": "https://www.ckmov.com/?url=",
-        "notsupport":["bilibili.com"]
+        "notsupport":["bilibili"]
     },
     {
         "name": "诺讯",
         "url": "https://www.nxflv.com/?url=",
-        "notsupport":["bilibili.com"]
+        "notsupport":["bilibili"]
     },
     {
         "name": "盘古",
         "url": "https://www.pangujiexi.cc/jiexi.php?url=",
-        "notsupport":["bilibili.com","iqiyi.com","v.youku.com"]
+        "notsupport":["bilibili","iqiyi","v.youku"]
      
     },
     {
         "name": "全民",
         "url": "https://jx.blbo.cc:4433/?url=",
-        "notsupport":["bilibili.com","iqiyi.com","v.youku.com"]
+        "notsupport":["bilibili","iqiyi","v.youku"]
     },
     {
         "name": "人人迷",
         "url": "https://jx.blbo.cc:4433/?url=",
-        "notsupport":["bilibili.com","iqiyi.com","v.youku.com"]
+        "notsupport":["bilibili","iqiyi","v.youku"]
     },
     {
         "name": "思云",
         "url": "https://jx.ap2p.cn/?url=",
-        "notsupport":["bilibili.com","iqiyi.com"]
+        "notsupport":["bilibili","iqiyi"]
 
     },
     {
         "name": "思古3",
         "url": "https://jsap.attakids.com/?url=",
-        "notsupport":["bilibili.com","iqiyi.com"]
+        "notsupport":["bilibili","iqiyi"]
     },
     {
         "name": "云端",
         "url": "https://sb.5gseo.net/?url=",
-        "notsupport":["bilibili.com"]
+        "notsupport":["bilibili"]
     },
     {
         "name":"mu38TV",
-        "url":"https://jx.m3u8.tv/jiexi/?url="
+        "url":"https://jx.m3u8.tv/jiexi/?url=",
+        "notsupport":[]
     }
 ]

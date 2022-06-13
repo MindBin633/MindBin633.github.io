@@ -21,7 +21,7 @@
     <div id="parsing-bar" class="wrapper">
         
         <div class="select-box">
-            <input id="target-url"type="text" placeholder="请输入你想看的链接">
+            <input id="target-url"type="text" placeholder="请输入你想看的链接" oninput="hideInterface()">
                 <select id="jx"></select>
             <input type="button" value="解析" onclick="jx()">
         </div>
@@ -60,41 +60,5 @@
     
     <footer class="clearfix">底部</footer>
 </body>
-<script>
-//读取配置文件
-window.onload = function () {
-            var url = "config.json"/*json文件url，本地的就写本地的位置，如果是服务器的就写服务器的路径*/
-            var request = new XMLHttpRequest();
-            var box = document.getElementById("jx");
-            request.open("get", url);/*设置请求方法与路径*/
-            request.send(null);/*不发送数据到服务器*/
-            request.onload = function () {/*XHR对象获取到返回信息后执行*/
-                if (request.status == 200) {/*返回状态为200，即为数据获取成功*/
-                    var json = JSON.parse(request.responseText);
-                    for(var i = 0;i<json.length;i++){
-                        var option = document.createElement('option');
-                        box.appendChild(option);
-                        option.value = json[i].url;
-                        option.innerText = json[i].name;
-
-                    }
-                }
-            }
-       }
-
-var obj = document.getElementById("jx");
-//执行接口调用函数
-var jx = function(){
-    var url = document.getElementById("target-url").value;
-    var index = obj.selectedIndex;
-    var urljx = obj.options[index].value;
-    var complete_url = urljx + url;
-    var iframe_obj = document.getElementById("playbox");
-    iframe_obj.src=complete_url;
-}
-//绑定事件，我希望隐藏掉不可用的解析接口
-//检查input text的内容，如果含有指定域名的隐藏
-var box = document.getElementById("jx");
-
-</script>
+<script src="main.js"></script>
 </html>
