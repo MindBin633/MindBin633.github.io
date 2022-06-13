@@ -7,7 +7,7 @@
     {
         "name": "Parwix解析",
         "url": "https://vip.parwix.com:4433/player/?url=",
-        "notsupport":[]
+        "notsupport":["none"]
     },
     {
         "name": "MaoPlayer解析",
@@ -24,13 +24,13 @@
         "url": "https://z1.m1907.cn/?jx=",
         "t": "m",
         "m":["解析腾讯的时候画质低，加载有点慢","解析的时候要选集"],
-        "notsupport":[]
+        "notsupport":["none"]
     },
     {
         "name": "B站1",
         "url": "https://vip.parwix.com:4433/player/?url=",
         "t": "m",
-        "notsupport":[]
+        "notsupport":["none"]
     },
     {
         "name": "爱豆",
@@ -40,12 +40,12 @@
     {
         "name": "BL(支持视频名称)",
         "url": "https://vip.bljiex.com/?v=",
-        "notsupport":[]
+        "notsupport":["none"]
     },
     {
         "name": "百域",
         "url": "https://jx.618g.com/?url=",
-        "notsupport":[]
+        "notsupport":["none"]
     },
     {
         "name": "MAO",
@@ -98,6 +98,6 @@
     {
         "name":"mu38TV",
         "url":"https://jx.m3u8.tv/jiexi/?url=",
-        "notsupport":[]
+        "notsupport":["none"]
     }
 ]
