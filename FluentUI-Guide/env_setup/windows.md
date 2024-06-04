@@ -35,3 +35,21 @@
 下载项目到本地，并解压
 ![下载项目](../assets//guide/FluentUI-Example-Download.png)
 
+### STEP2
+
+打开Qt Creator->打开项目
+
+![打开项目](../assets/guide/qt-creator-open-project.png)
+
+找到刚刚解压的文件夹的根目录中的CMakeList.txt
+
+![打开项目](../assets/guide/qt-project-entry.png)
+
+点击构建和运行条目下的MSVC编译器，等待加载完成
+
+![选择MSVC](../assets/guide/load-project-success.gif)
+
+Debug构建程序，如果没有问题你就可以看到example示例程序了.
+
+
+![构建example](../assets/guide/build-example-success.gif)
